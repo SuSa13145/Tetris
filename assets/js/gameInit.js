@@ -9,8 +9,8 @@ function drawBackGround(){
     background = $('<div></div>');
     background.attr('id','gameContainer');
     background.css({
-        height : matrix.n * squareSize * 1.5,
-        width : matrix.m * squareSize * 2.25
+        height : 24 * squareSize * 1.5,
+        width : 10 * squareSize * 2.25
     })
     background.appendTo('body');
 }
@@ -18,19 +18,19 @@ function drawGameAndInformationsArea() {
     gameArea = $('<div></div>')
     gameArea.attr('id','gameArea')
     gameArea.css({
-        top: ( matrix.n * squareSize * 1.5)* 0.075,
+        top: ( .10 * squareSize * 1.5)* 0.075,
         right: squareSize * 7,
-        height: matrix.n * squareSize,
-        width: matrix.m * squareSize
+        height: 24 * squareSize,
+        width: 10 * squareSize
     })
     gameArea.appendTo(background);
 
     informationArea = $('<div></div>')
     informationArea.attr('id','informationArea')
     informationArea.css({
-        top: ( matrix.n * squareSize * 1.5)* 0.075,
+        top: ( 10 * squareSize * 1.5)* 0.075,
         right: 0,
-        height: matrix.n * squareSize,
+        height: 10 * squareSize,
         width: squareSize * 6
     })
     informationArea.appendTo(background);
@@ -70,9 +70,9 @@ function drawScoreAndLevelArea() {
     levelArea.appendTo(informationArea)
 }
 function drawMatrixes(){
-    for(let i = 0; i < matrix.n; i++){
+    for(let i = 0; i < 24; i++){
         let array = [];
-        for(let j = 0; j < matrix.m;j++) {
+        for(let j = 0; j < 10;j++) {
 
             square = $('<div></div>')
             square.addClass('emptySquare');
@@ -115,9 +115,13 @@ function drawGameOver() {
     gameOver.appendTo(background)
 
 }
-function initGame(){
+
+function initStartScreen(){
     drawBackGround()
     drawStartArea()
+}
+function initGame(){
+
     drawGameAndInformationsArea()
     drawNextPieceArea()
     drawScoreAndLevelArea();
