@@ -1,0 +1,92 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-image: url("assets/imgs/333872.png");
+
+    background-size: contain;
+}
+#top_list {
+    width: 200px;
+    height: 450px;
+    border-left: 3px solid black;
+    position: absolute;
+    background-color:rgba(255,255,255,.8);
+    border-radius:.25em;
+    box-shadow:0 0 .25em rgba(0,0,0,.25);
+    box-sizing:border-box;
+    ext-align:center;
+    z-index: 5;
+ }
+.infromationTable{
+    background-color:rgba(255,255,255,.8);
+    border-radius:.25em;
+    box-shadow:0 0 .25em rgba(0,0,0,.25);
+    box-sizing:border-box;
+    left:50%;
+    padding:10vmin;
+    position:absolute;
+    text-align:center;
+    top:70%;
+    z-index: 4;
+    transform:translate(-50%, -50%);
+}
+#gameContainer{
+    position: relative;
+}
+#gameArea {
+    position: absolute;
+    border: solid #000000 10px;
+}
+
+.nextPSquare{
+    position: absolute;
+
+    margin-top: 5px;
+
+}
+#informationArea:hover{
+    border: solid #000 1px;
+}
+#informationArea{
+
+    justify-content: center;
+    position: absolute;
+}
+#nextPieceArea{
+    border: solid #000 5px;
+    margin: auto;
+    margin-top: 5px;
+}
+#scoreArea{
+    border: solid #000 5px;
+    margin: auto;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 45px;
+    font-family: m54 Jersey;
+}
+#levelArea{
+    border: solid #000 5px;
+    margin: auto;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 30px;
+    font-family: m54 Jersey;
+}
+.emptySquare{
+    position: absolute;
+
+}
+.fullSquare{
+    z-index:2;
+    position: absolute;
+    box-sizing: border-box;
+    border: outset 7.5px
+}
+.indicatorSquare{
+
+}
+@font-face {
+    font-family: m54 Jersey;
+    src: url(assets/JerseyM54-aLX9.ttf);
+}
